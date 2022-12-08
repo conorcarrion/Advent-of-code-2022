@@ -38,12 +38,6 @@ print(prio_sum)
 
 ## part two
 
-test_elves = [
-    'wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn', 
-    'ttgJtRGJQctTZtZT', 
-    'CrZsJsPPZsGzwwsLwLmpwMDw'
-    ]
-
 def group_cruncher(rs_full):
     elf_group_letters = []
     for n in range(0, len(rs_full), 3):
