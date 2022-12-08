@@ -15,7 +15,7 @@ resolution = {'rock': 'scissors',
 scoring = {'lose': 0, 'draw': 3, 'win': 6}
 
 # open text file containing scores and convert to list of strings 'B Z'
-with open('Day2-Rockpaperscissors.txt', 'r') as outfile:
+with open('Day2-puzzleinput.txt', 'r') as outfile:
     comp_string = outfile.read()
     comp_round_list = comp_string.split('\n')
 

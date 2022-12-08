@@ -1,4 +1,4 @@
-with open('Day1-Calories.txt', 'r') as outfile:
+with open('Day1-puzzleinput.txt', 'r') as outfile:
     cal_content = outfile.read()
     cal_ls = cal_content.split('\n')
     cal_dash = '-'.join(cal_ls)
