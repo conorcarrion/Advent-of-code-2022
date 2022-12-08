@@ -32,4 +32,34 @@ def priority_cruncher(rs_bad):
 
 prio_list = [priority_cruncher(bad_item) for bad_item in rs_bad_items]
 
-print(sum(prio_list))
+prio_sum = sum(prio_list)
+
+print(prio_sum)
+
+## part two
+
+test_elves = [
+    'wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn', 
+    'ttgJtRGJQctTZtZT', 
+    'CrZsJsPPZsGzwwsLwLmpwMDw'
+    ]
+
+def group_cruncher(rs_full):
+    elf_group_letters = []
+    for n in range(0, len(rs_full), 3):
+        rs = rs_full[n:n+3]
+        for letter in rs[0]:
+            if letter in rs[1] and letter in rs[2]:
+                elf_group_letters.append(letter)
+                break
+
+    return elf_group_letters
+    
+
+elf_group_letters = group_cruncher(rucksack_list)
+
+group_prio_list = [priority_cruncher(badge) for badge in elf_group_letters]
+priorities_sum = sum(group_prio_list)
+
+print(priorities_sum)
+
